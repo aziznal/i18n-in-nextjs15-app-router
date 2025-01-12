@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import "@/lib/i18n/i18n-server";
+import { Providers } from "@/lib/client/components/Providers";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,12 +26,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <Providers>
+      <html lang="en" className="dark">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </html>
+    </Providers>
   );
 }
+
+// TODO: create language selector
+// TODO: get language from user's preferences or fallback to auto-detect
+// TODO: zod?
+// TODO: typesafetify
+// TODO: should there be a lng param?
+// TODO: emails with react-mail
+// TODO: site metadata
+//
+// DONE: place translation resources into json files

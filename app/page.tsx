@@ -1,5 +1,7 @@
+import i18next from "i18next";
 import { LucideComputer, LucideUser } from "lucide-react";
 import Link from "next/link";
+
 
 export default function Home() {
   return (
@@ -8,14 +10,14 @@ export default function Home() {
         icon={<LucideComputer className="text-amber-500" />}
         href="/server-example"
       >
-        Server Example
+        {i18next.t("PageLink.ServerExample")}
       </PageLink>
 
       <PageLink
         icon={<LucideUser className="text-blue-500" />}
         href="/client-example"
       >
-        Client Example
+        {i18next.t("PageLink.ClientExample")}
       </PageLink>
     </div>
   );
