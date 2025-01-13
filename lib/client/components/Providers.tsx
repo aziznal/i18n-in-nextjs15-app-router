@@ -1,13 +1,20 @@
 "use client";
 
-import { I18nextProvider } from "react-i18next";
+import { AbstractIntlMessages, NextIntlClientProvider } from "next-intl";
 
-import { i18next } from "@/lib/i18n/i18n-client";
-
-export function Providers(props: { children: React.ReactNode }) {
+export function Providers(props: {
+  children: React.ReactNode;
+  translations: AbstractIntlMessages;
+  locale: string;
+}) {
   return (
     <>
-      <I18nextProvider i18n={i18next}>{props.children}</I18nextProvider>
+      <NextIntlClientProvider
+        messages={props.translations}
+        locale={props.locale}
+      >
+        {props.children}
+      </NextIntlClientProvider>
     </>
   );
 }

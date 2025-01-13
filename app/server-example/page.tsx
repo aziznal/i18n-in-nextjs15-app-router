@@ -1,5 +1,7 @@
-import i18next from "i18next";
+import { useTranslations } from "next-intl";
 
 export default function ServerExamplePage() {
-  return <div>{i18next.t("Greeting")}</div>;
+  const t = useTranslations();
+
+  return <div>{t("Greeting")}</div>;
 }

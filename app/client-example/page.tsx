@@ -1,9 +1,9 @@
 "use client";
 
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 
 export default function ClientExamplePage() {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return <div>{t("Greeting")}</div>;
 }
