@@ -1,9 +1,10 @@
 "use client";
 
+import { Page } from "@/lib/client/components/Page";
 import { useTranslations } from "next-intl";
 
 export default function ClientExamplePage() {
   const t = useTranslations();
 
-  return <div>{t("Greeting")}</div>;
+  return <Page>{t("Greeting")}</Page>;
 }

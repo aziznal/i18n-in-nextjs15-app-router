@@ -1,6 +1,6 @@
 "use client";
 
-import { getAvailableLanguages } from "@/lib/i18n/common";
+import { getAvailableLocales } from "@/lib/i18n/common";
 import { LOCALE_COOKIE } from "@/lib/i18n/common";
 import { cn } from "@/lib/utils";
 import cookies from "js-cookie";
@@ -25,7 +25,7 @@ function getStyleByLocale(locale: string) {
     default:
       return {
         normal: "",
-        active: "",
+        active: "bg-gray-500",
       };
   }
 }
@@ -40,15 +40,15 @@ export function LanguageSelector() {
 
   return (
     <div className="absolute top-6 right-6 flex gap-3 text-xs leading-none">
-      {getAvailableLanguages().map((lng) => (
+      {getAvailableLocales().map((lng) => (
         <div
           className={cn(
             "p-2 border font-mono cursor-pointer rounded-lg transition-colors font-bold",
-            getStyleByLocale(lng.locale).normal,
-            locale === lng.locale && getStyleByLocale(lng.locale).active,
+            getStyleByLocale(lng.code).normal,
+            locale === lng.code && getStyleByLocale(lng.code).active,
           )}
-          key={lng.locale}
-          onClick={() => selectLanguage(lng.locale)}
+          key={lng.code}
+          onClick={() => selectLanguage(lng.code)}
         >
           {lng.nativeName}
         </div>

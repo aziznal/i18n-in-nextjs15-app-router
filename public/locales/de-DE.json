@@ -1,0 +1,8 @@
+{
+  "PageLink": {
+    "ServerExample": "Zerver Beispiel",
+    "ClientExample": "Klient Beispiel"
+  },
+
+  "Greeting": "Hallo. Ich bin ein Page (SPRICH DEUTSCH DU EIN ...)"
+}
