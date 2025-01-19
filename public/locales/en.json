@@ -1,4 +1,9 @@
 {
+  "Metadata": {
+    "Title": "i18n in Next.js 15",
+    "Description": "Includes examples for zod, SSR, runtime locale switching, and react-email."
+  },
+
   "PageLink": {
     "ServerExample": "Server Example",
     "ClientExample": "Client Example",

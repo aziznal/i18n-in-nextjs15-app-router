@@ -1,4 +1,9 @@
 {
+  "Metadata": {
+    "Title": "(de) i18n in Next.js 15",
+    "Description": "Mit beispiele fuer zod, SSR, runtime locale aendern, und react-email."
+  },
+
   "PageLink": {
     "ServerExample": "Server Beispiel",
     "ClientExample": "Client Beispiel"
