@@ -61,6 +61,7 @@ export default async function RootLayout({
 }
 
 // TODO: basic demo of some ICU formats and rich text rendering
+// TODO: Some type issues in react-email components
 
 // DONE: create language selector
 // DONE: get language from user's preferences or fallback to auto-detect

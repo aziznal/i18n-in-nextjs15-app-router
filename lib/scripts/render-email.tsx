@@ -1,6 +1,6 @@
 import { ExampleEmail } from "@/emails/example-email";
 import { render } from "@react-email/render";
-import { NextIntlClientProvider } from "next-intl";
+import { createTranslator } from "next-intl";
 import { getTranslationsByLocale } from "../i18n/server-utils";
 
 async function run() {
@@ -8,18 +8,13 @@ async function run() {
     locale: "de",
   });
 
-  const result = await render(
-    <>
-      <NextIntlClientProvider
-        locale="de"
-        messages={messages}
-        timeZone="Europe/Istanbul"
-      >
-        <ExampleEmail />
-      </NextIntlClientProvider>
-    </>,
-    { pretty: true },
-  );
+  const t = createTranslator({
+    locale: "de",
+    messages: messages,
+    timeZone: "Europe/Istanbul",
+  });
+
+  const result = await render(<ExampleEmail t={t} />, { pretty: true });
 
   console.log(result);
 }

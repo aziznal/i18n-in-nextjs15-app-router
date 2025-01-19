@@ -7,12 +7,19 @@ import {
   Section,
   Text,
 } from "@react-email/components";
-import { useTranslations } from "next-intl";
+import { createTranslator } from "next-intl";
 
-import * as React from "react";
+import * as en from "@/public/locales/en.json";
 
-export const ExampleEmail = () => {
-  const t = useTranslations();
+export const ExampleEmail = (props?: {
+  t: ReturnType<typeof createTranslator>;
+}) => {
+  const t =
+    props?.t ??
+    createTranslator({
+      locale: "en",
+      messages: en,
+    });
 
   return (
     <Html>
