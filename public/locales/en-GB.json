@@ -4,5 +4,9 @@
     "ClientExample": "Clayent Exampoe"
   },
 
-  "Greeting": "Wee ahh very bri'ish"
+  "Greeting": "Wee ahh very bri'ish",
+
+  "FormExample": {
+    "PageTitle": "Form Example Page"
+  }
 }

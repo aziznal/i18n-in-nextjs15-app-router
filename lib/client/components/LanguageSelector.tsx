@@ -5,6 +5,7 @@ import { LOCALE_COOKIE } from "@/lib/i18n/common";
 import { cn } from "@/lib/utils";
 import cookies from "js-cookie";
 import { useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
 
 function getStyleByLocale(locale: string) {
   switch (locale) {
@@ -31,15 +32,17 @@ function getStyleByLocale(locale: string) {
 }
 
 export function LanguageSelector() {
+  const router = useRouter();
+
   const locale = useLocale();
 
   const selectLanguage = (lng: string) => {
     cookies.set(LOCALE_COOKIE, lng);
-    location.reload();
+    router.refresh();
   };
 
   return (
-    <div className="absolute top-6 right-6 flex gap-3 text-xs leading-none">
+    <div className="absolute top-6 right-6 flex gap-3 text-xs leading-none whitespace-nowrap overflow-x-auto max-w-[90vw] p-3">
       {getAvailableLocales().map((lng) => (
         <div
           className={cn(

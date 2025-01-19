@@ -1,6 +1,7 @@
 "use client";
 
 import { AbstractIntlMessages, NextIntlClientProvider } from "next-intl";
+import "@/lib/i18n/zod";
 
 export function Providers(props: {
   children: React.ReactNode;

@@ -17,16 +17,19 @@ async function getLocaleFromHeaders(): Promise<string> {
 
   if (!rawHeader) return DEFAULT_LANGUAGE.code;
 
-  const locales = acceptLanguageHeaderParser.parse(rawHeader);
+  const locales = acceptLanguageHeaderParser.parse(rawHeader).map((l) => {
+    if (l.region) return `${l.code}-${l.region}`;
+    return l.code;
+  });
 
   const supportedLocales = locales.filter((locale) =>
     getAvailableLocales()
       .map((l) => l.code)
-      .includes(locale.code),
+      .includes(locale),
   );
 
   if (supportedLocales.length > 0) {
-    return supportedLocales[0].code;
+    return supportedLocales[0];
   }
 
   // on the off case the accept-language header is missing

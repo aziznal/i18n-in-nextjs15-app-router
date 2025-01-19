@@ -6,6 +6,8 @@ export const Locales = {
   "de-DE": { code: "de-DE", nativeName: "Deutsch (Deutschland)" },
 };
 
+export type AvailableLocale = keyof (typeof Locales);
+
 export function getAvailableLocales() {
   return Object.values(Locales).map(
     ({ code, nativeName }) =>

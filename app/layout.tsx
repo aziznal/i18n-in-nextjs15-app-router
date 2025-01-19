@@ -45,13 +45,13 @@ export default async function RootLayout({
   );
 }
 
-// TODO: get language from user's preferences or fallback to auto-detect
-// TODO: zod?
-// TODO: should there be a lng param?
+// TODO: should there be a lng param: Yes, probably. Link: https://webmasters.stackexchange.com/questions/403/how-should-i-structure-my-urls-for-both-seo-and-localization/44289?newreg=ec84001177994fcf8db060f884cc7cf3
 // TODO: emails with react-mail
 // TODO: site metadata
 // TODO: basic demo of some ICU formats and rich text rendering
 //
+// DONE: get language from user's preferences or fallback to auto-detect
+// DONE: zod
 // DONE: place translation resources into json files
 // DONE: typesafetify
 // DONE: create language selector

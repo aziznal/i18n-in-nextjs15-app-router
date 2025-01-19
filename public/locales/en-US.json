@@ -4,5 +4,9 @@
     "ClientExample": "Client Example (in America)"
   },
 
-  "Greeting": "'Murica. F*ck yeah!"
+  "Greeting": "'Murica. F*ck yeah!",
+
+  "FormExample": {
+    "PageTitle": "Form Example Page"
+  }
 }

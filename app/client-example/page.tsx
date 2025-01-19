@@ -6,5 +6,5 @@ import { useTranslations } from "next-intl";
 export default function ClientExamplePage() {
   const t = useTranslations();
 
-  return <Page>{t("Greeting")}</Page>;
+  return <Page showBackButton>{t("Greeting")}</Page>;
 }

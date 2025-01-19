@@ -4,5 +4,9 @@
     "ClientExample": "Klient Beispiel"
   },
 
-  "Greeting": "Hallo. Ich bin ein Page (SPRICH DEUTSCH DU EIN ...)"
+  "Greeting": "Hallo. Ich bin ein Page (SPRICH DEUTSCH DU EIN ...)",
+
+  "FormExample": {
+    "PageTitle": "Form Example Page"
+  }
 }

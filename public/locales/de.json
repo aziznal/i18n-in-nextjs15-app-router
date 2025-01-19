@@ -4,5 +4,20 @@
     "ClientExample": "Client Beispiel"
   },
 
-  "Greeting": "Hallo. Ich bin ein Page"
+  "Greeting": "Hallo. Ich bin ein Page",
+
+  "FormExample": {
+    "PageTitle": "Form Example Page"
+  },
+
+  "Validation": {
+    "InvalidField": "Nicht valid field",
+    "Required": "This field is required",
+
+    "String": {
+      "Email": "Email is invalid",
+      "MinLength": "Length is too short",
+      "MaxLength": "Length is too long"
+    }
+  }
 }
