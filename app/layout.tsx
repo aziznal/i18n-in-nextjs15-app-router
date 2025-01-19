@@ -60,7 +60,6 @@ export default async function RootLayout({
   );
 }
 
-// TODO: emails with react-mail
 // TODO: basic demo of some ICU formats and rich text rendering
 
 // DONE: create language selector
@@ -69,3 +68,4 @@ export default async function RootLayout({
 // DONE: zod
 // Done: should there be a lng param: Yes, probably. Link: https://webmasters.stackexchange.com/questions/403/how-should-i-structure-my-urls-for-both-seo-and-localization/44289?newreg=ec84001177994fcf8db060f884cc7cf3
 // DONE: site metadata
+// DONE: emails with react-mail

@@ -2,6 +2,7 @@ import { getRequestConfig } from "next-intl/server";
 import { cookies, headers } from "next/headers";
 import { getAvailableLocales, LOCALE_COOKIE, DEFAULT_LANGUAGE } from "./common";
 import acceptLanguageHeaderParser from "accept-language-parser";
+import { getTranslationsByLocale } from "./server-utils";
 
 async function getLocaleFromCookie(): Promise<string | undefined> {
   return (await cookies()).get(LOCALE_COOKIE)?.value;
@@ -47,6 +48,9 @@ export default getRequestConfig(async () => {
 
   return {
     locale,
-    messages: (await import(`../../public/locales/${locale}.json`)).default,
+    messages: await getTranslationsByLocale({ locale }),
+
+    // can also be inferred just like the locale
+    timeZone: "Europe/Istanbul",
   };
 });
