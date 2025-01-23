@@ -12,8 +12,6 @@ export async function GET() {
   // custom call to get a specific locale's translations
   const t2 = createTranslator({
     locale: Locales["en-US"].code,
-
-    // @ts-expect-error -- error here is not very clear because things seem to still work despite it.
     messages: enUS,
   });
 

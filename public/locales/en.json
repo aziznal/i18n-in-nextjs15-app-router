@@ -7,13 +7,18 @@
   "PageLink": {
     "ServerExample": "Server Example",
     "ClientExample": "Client Example",
-    "FormExample": "Form Example"
+    "FormExample": "Form Example",
+    "ICUExample": "ICU Example"
   },
 
   "Greeting": "Hello. I am a page",
 
   "FormExample": {
     "PageTitle": "Form Example Page"
+  },
+
+  "ICUExamples": {
+    "PageTitle": "ICU Examples"
   },
 
   "Validation": {

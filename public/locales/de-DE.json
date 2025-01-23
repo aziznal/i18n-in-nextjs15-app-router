@@ -1,12 +1,35 @@
 {
-  "PageLink": {
-    "ServerExample": "Zerver Beispiel",
-    "ClientExample": "Klient Beispiel"
+  "Metadata": {
+    "Title": "(de) i18n in Next.js 15 - Die Deutsche Version",
+    "Description": "Beispiele für zod, SSR, locale wechseln, react-email. Alles muss genau sein!"
   },
 
-  "Greeting": "Hallo. Ich bin ein Page (SPRICH DEUTSCH DU EIN ...)",
+  "PageLink": {
+    "ServerExample": "Server Beispiel",
+    "ClientExample": "Klient Beispiel",
+    "FormExample": "Form Beispiel",
+    "ICUExample": "ICU Beispiel"
+  },
+
+  "Greeting": "Hallo. Ich bin eine Page (SPRICH DEUTSCH DU EIN ...)! Keine Fehler erlaubt!",
 
   "FormExample": {
-    "PageTitle": "Form Example Page"
+    "PageTitle": "Form Beispiel Seite (Ordnung muss sein)"
+  },
+
+  "ICUExamples": {
+    "PageTitle": "ICU Beispiel (Jede Zeile muss stimmen)"
+  },
+
+  "Validation": {
+    "InvalidField": "Feld ist ungültig (So etwas geht nicht)",
+    "Required": "Dieses Feld ist Pflicht (Kein Platz für Ausreden)",
+
+    "String": {
+      "Email": "E-Mail ist falsch (Es muss korrekt sein)",
+      "MinLength": "Zu kurz (Mehr Text nötig)",
+      "MaxLength": "Zu lang (Strenge Regeln)"
+    }
   }
 }
+

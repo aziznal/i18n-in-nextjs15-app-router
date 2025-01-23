@@ -1,28 +1,34 @@
 {
   "Metadata": {
     "Title": "(de) i18n in Next.js 15",
-    "Description": "Mit beispiele fuer zod, SSR, runtime locale aendern, und react-email."
+    "Description": "Mit Beispielen für zod, SSR, runtime locale ändern, und react-email."
   },
 
   "PageLink": {
     "ServerExample": "Server Beispiel",
-    "ClientExample": "Client Beispiel"
+    "ClientExample": "Client Beispiel",
+    "FormExample": "Form Beispiel",
+    "ICUExample": "ICU Beispiel"
   },
 
-  "Greeting": "Hallo. Ich bin ein Page",
+  "Greeting": "Hallo. Ich bin eine Seite",
 
   "FormExample": {
-    "PageTitle": "Form Example Page"
+    "PageTitle": "Form Beispiel Seite"
+  },
+
+  "ICUExamples": {
+    "PageTitle": "ICU Beispiel"
   },
 
   "Validation": {
-    "InvalidField": "Nicht valid field",
-    "Required": "This field is required",
+    "InvalidField": "Ungültiges Feld",
+    "Required": "Dieses Feld ist erforderlich",
 
     "String": {
-      "Email": "Email is invalid",
-      "MinLength": "Length is too short",
-      "MaxLength": "Length is too long"
+      "Email": "E-Mail ist ungültig",
+      "MinLength": "Länge ist zu kurz",
+      "MaxLength": "Länge ist zu lang"
     }
   }
 }

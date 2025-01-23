@@ -34,13 +34,13 @@ password: ${values.password}
   };
 
   return (
-    <Page showBackButton>
+    <Page showBackButton showBorder>
       <h1 className="text-xl font-bold mb-3">{t("FormExample.PageTitle")}</h1>
 
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(printFormValues)}
-          className="flex flex-col gap-4 w-[400px] border p-6 rounded-lg"
+          className="flex flex-col gap-4 w-[400px]"
         >
           <FormField
             control={form.control}

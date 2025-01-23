@@ -1,12 +1,34 @@
 {
-  "PageLink": {
-    "ServerExample": "Sehveh Exampoe",
-    "ClientExample": "Clayent Exampoe"
+  "Metadata": {
+    "Title": "i18n in Next.js 15 - Brit Edition",
+    "Description": "Examples for zod, SSR, runtime locale switching, and react-email. Properly British, of course."
   },
 
-  "Greeting": "Wee ahh very bri'ish",
+  "PageLink": {
+    "ServerExample": "Sehveh Exampoe",
+    "ClientExample": "Clayent Exampoe",
+    "FormExample": "Form Exampoe (Jolly Good)",
+    "ICUExample": "ICU Exampoe (Cheerio)"
+  },
+
+  "Greeting": "Wee ahh very bri'ish, innit? Ready to code, love!",
 
   "FormExample": {
-    "PageTitle": "Form Example Page"
+    "PageTitle": "Form Exampoe Page (Blimey)"
+  },
+
+  "ICUExamples": {
+    "PageTitle": "ICU Exampoe (Mate)"
+  },
+
+  "Validation": {
+    "InvalidField": "This field's a bit dodgy",
+    "Required": "This field’s as necessary as a cup of tea in the morning",
+
+    "String": {
+      "Email": "Email ain't proper if it doesn’t have .co.uk",
+      "MinLength": "That’s shorter than a pint of lager",
+      "MaxLength": "That's longer than a queue at the chippy"
+    }
   }
 }

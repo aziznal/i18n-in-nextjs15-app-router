@@ -1,12 +1,34 @@
 {
-  "PageLink": {
-    "ServerExample": "Server Example (in America)",
-    "ClientExample": "Client Example (in America)"
+  "Metadata": {
+    "Title": "i18n in Next.js 15 - 'Murica Style",
+    "Description": "Examples for zod, SSR, runtime locale switching, and react-email. It's as American as apple pie."
   },
 
-  "Greeting": "'Murica. F*ck yeah!",
+  "PageLink": {
+    "ServerExample": "Server Example (in America, baby!)",
+    "ClientExample": "Client Example (USA All the Way)",
+    "FormExample": "Form Example (Freedom Edition)",
+    "ICUExample": "ICU Example (Yeehaw)"
+  },
+
+  "Greeting": "'Murica. F*ck yeah! Get ready to code like a patriot!",
 
   "FormExample": {
-    "PageTitle": "Form Example Page"
+    "PageTitle": "Form Example Page (God Bless America)"
+  },
+
+  "ICUExamples": {
+    "PageTitle": "ICU Examples (USA Edition)"
+  },
+
+  "Validation": {
+    "InvalidField": "This field ain't American enough",
+    "Required": "This field is as required as a BBQ on the 4th of July",
+
+    "String": {
+      "Email": "Email ain't valid if it doesn't end in .com",
+      "MinLength": "This input's shorter than a hot dog at a tailgate",
+      "MaxLength": "That's longer than a road trip across the country"
+    }
   }
 }
