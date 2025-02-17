@@ -18,7 +18,55 @@
   },
 
   "ICUExamples": {
-    "PageTitle": "ICU Exampoe (Mate)"
+    "PageTitle": "The ICU Format - Proper British Edition",
+
+    "ICUDescription": {
+      "Paragraph1": "The <strong>ICU (International Components for Unicode)</strong> format is all about adapting to different languages and cultures, keeping things as proper as a cup of tea.",
+      "Paragraph2": "In the UK, everything from counting biscuits to currency can change the structure of a sentence. It's all about making it fit the British way!",
+      "Paragraph3": "And we often use dynamic values in our apps, which need to be tailored to the way we speak. Whether it's 'mate' or 'bloke,' it’s important to keep things right."
+    },
+
+    "ObjectCountExamples": {
+      "SectionTitle": "Object Count Examples (British Style)",
+      "CartItems": "You have {count, plural, =0 {no items} =1 {1 item} other {# items}} in your cart (better get a move on!)"
+    },
+
+    "NumberExamples": {
+      "SectionTitle": "Number Examples (Spot on)",
+
+      "NumberNormal": {
+        "ExampleLabel": "Default number (Spot on!)",
+        "Number": "{inputNumber, number}"
+      },
+
+      "NumberPercentage": {
+        "ExampleLabel": "Percentage (Brilliant!)",
+        "Number": "{inputNumber, number, ::percent .000}"
+      },
+
+      "NumberMeasurement": {
+        "ExampleLabel": "Measurement (Inches, of course)",
+        "Number": "{inputNumber, number, ::measure-unit/length-inch unit-width-full-name}"
+      },
+
+      "NumberScientific": {
+        "ExampleLabel": "Scientific Notation (For the clever lot)",
+        "Number": "{inputNumber, number, ::scientific}"
+      },
+
+      "NumberCurrency": {
+        "ExampleLabel": "Currency (GBP - British Pounds)",
+        "Number": "{inputNumber, number, ::currency/GBP}"
+      },
+
+      "MoreSkeletonsLink": "More skeletons <link>here</link> (don't miss it!)"
+    },
+
+    "GenderExamples": {
+      "SectionTitle": "Gender Examples (Everyone’s Welcome)",
+
+      "ThereAreStudents": "{gender, select, male {{count, plural, =1 {There’s 1 bloke} =2 {There are 2 blokes} other {There are # blokes}}} female {{count, plural, =1 {There’s 1 lass} =2 {There are 2 lasses} other {There are # lasses}}} other {{count, plural, =1 {There’s 1 student} =2 {There are 2 students} other {There are # students}}}}"
+    }
   },
 
   "Validation": {

@@ -18,7 +18,55 @@
   },
 
   "ICUExamples": {
-    "PageTitle": "ICU Beispiel (Jede Zeile muss stimmen)"
+    "PageTitle": "Das ICU-Format - Deutsche Perfektion",
+
+    "ICUDescription": {
+      "Paragraph1": "Das <strong>ICU (International Components for Unicode)</strong>-Format ist die präziseste Art, sprachliche und kulturelle Anforderungen zu berücksichtigen, so wie es nur die Deutschen können.",
+      "Paragraph2": "In Deutschland verändern sich Zahlen, Währungen, Geschlechter und Datumsangaben so präzise, dass jede Sprache genau an die Anforderungen angepasst werden muss.",
+      "Paragraph3": "Dynamische Werte werden exakt behandelt, basierend auf den genauen Regeln der Grammatik und den Sprachgewohnheiten. Hier gibt es keinen Raum für Fehler!"
+    },
+
+    "ObjectCountExamples": {
+      "SectionTitle": "Beispiele für exakte Objektzählungen",
+      "CartItems": "Du hast {count, plural, =0 {keine Artikel} =1 {1 Artikel} other {# Artikel}} in deinem Warenkorb (alles muss ordentlich sein)"
+    },
+
+    "NumberExamples": {
+      "SectionTitle": "Präzise Zahlbeispiele",
+
+      "NumberNormal": {
+        "ExampleLabel": "Normale Zahl (absolut korrekt)",
+        "Number": "{inputNumber, number}"
+      },
+
+      "NumberPercentage": {
+        "ExampleLabel": "Prozent (genau wie der deutsche Standard)",
+        "Number": "{inputNumber, number, ::percent .000}"
+      },
+
+      "NumberMeasurement": {
+        "ExampleLabel": "Messung (Millimeter, kein Zentimeter weniger)",
+        "Number": "{inputNumber, number, ::measure-unit/length-millimeter unit-width-full-name}"
+      },
+
+      "NumberScientific": {
+        "ExampleLabel": "Wissenschaftliche Notation (Mathematik in ihrer reinsten Form)",
+        "Number": "{inputNumber, number, ::scientific}"
+      },
+
+      "NumberCurrency": {
+        "ExampleLabel": "Währungsnotation (EUR - wie es sich gehört)",
+        "Number": "{inputNumber, number, ::currency/EUR}"
+      },
+
+      "MoreSkeletonsLink": "Mehr Skeletons <link>hier</link> (auf keinen Fall verpassen)"
+    },
+
+    "GenderExamples": {
+      "SectionTitle": "Beispiele für Geschlechter",
+
+      "ThereAreStudents": "{gender, select, male {{count, plural, =1 {Es gibt 1 Student (männlich)} =2 {Es gibt 2 Studenten (männlich)} other {Es gibt # Studenten (männlich)}}} female {{count, plural, =1 {Es gibt 1 Studentin (weiblich)} =2 {Es gibt 2 Studentinnen (weiblich)} other {Es gibt # Studentinnen (weiblich)}}} other {{count, plural, =1 {Es gibt 1 Student} =2 {Es gibt 2 Studenten} other {Es gibt # Studenten}}}}"
+    }
   },
 
   "Validation": {
@@ -32,4 +80,3 @@
     }
   }
 }
-

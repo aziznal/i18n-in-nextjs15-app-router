@@ -8,7 +8,7 @@ export function Page(props: {
   showBorder?: boolean;
 }) {
   return (
-    <div className="min-h-[100dvh] flex flex-col items-center justify-center">
+    <div className="min-h-[100dvh] flex flex-col items-center justify-center py-12">
       <div className="px-4 sm:min-w-[300px] max-w-[700px]">
         {props.showBackButton && (
           <Link

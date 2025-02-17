@@ -18,7 +18,55 @@
   },
 
   "ICUExamples": {
-    "PageTitle": "ICU Examples (USA Edition)"
+    "PageTitle": "The ICU Format - 'Murica Style",
+
+    "ICUDescription": {
+      "Paragraph1": "The <strong>ICU (International Components for Unicode)</strong> format is how we make sure things like language, culture, and numbers stay true to the American way!",
+      "Paragraph2": "From the number of burgers to the dollar bills in your pocket, different cultures shape the way we structure sentences. It's all about making it feel like home, no matter where you are!",
+      "Paragraph3": "Plus, we often use dynamic values in our apps, and you gotta account for different ways to say things—like ‘y’all’ vs. ‘you guys’—depending on the language."
+    },
+
+    "ObjectCountExamples": {
+      "SectionTitle": "Object Count Examples (America Edition)",
+      "CartItems": "You have {count, plural, =0 {no items} =1 {1 item} other {# items}} in your cart (get ready to shop!)"
+    },
+
+    "NumberExamples": {
+      "SectionTitle": "Number Examples (More Bang for Your Buck)",
+
+      "NumberNormal": {
+        "ExampleLabel": "Default number (American style)",
+        "Number": "{inputNumber, number}"
+      },
+
+      "NumberPercentage": {
+        "ExampleLabel": "Percentage (You're winning!)",
+        "Number": "{inputNumber, number, ::percent .000}"
+      },
+
+      "NumberMeasurement": {
+        "ExampleLabel": "Measurement (Inches, baby!)",
+        "Number": "{inputNumber, number, ::measure-unit/length-inch unit-width-full-name}"
+      },
+
+      "NumberScientific": {
+        "ExampleLabel": "Scientific Notation (For when you need big numbers)",
+        "Number": "{inputNumber, number, ::scientific}"
+      },
+
+      "NumberCurrency": {
+        "ExampleLabel": "Currency (USD - Big Money)",
+        "Number": "{inputNumber, number, ::currency/USD}"
+      },
+
+      "MoreSkeletonsLink": "More skeletons <link>here</link> (just click it!)"
+    },
+
+    "GenderExamples": {
+      "SectionTitle": "Gender Examples (Everybody's Welcome)",
+
+      "ThereAreStudents": "{gender, select, male {{count, plural, =1 {There’s 1 dude} =2 {There are 2 dudes} other {There are # dudes}}} female {{count, plural, =1 {There’s 1 lady} =2 {There are 2 ladies} other {There are # ladies}}} other {{count, plural, =1 {There’s 1 student} =2 {There are 2 students} other {There are # students}}}}"
+    }
   },
 
   "Validation": {

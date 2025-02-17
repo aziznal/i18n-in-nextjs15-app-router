@@ -1,65 +1,168 @@
 import { Page } from "@/lib/client/components/Page";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function ClientExamplePage() {
   const t = useTranslations();
 
   return (
     <Page showBackButton showBorder>
-      <h1 className="text-3xl font-bold mb-3">The ICU Format</h1>
+      <h1 className="text-3xl font-bold mb-3">{t("ICUExamples.PageTitle")}</h1>
 
       <p className="mb-4">
-        The{" "}
-        <span className="font-bold">
-          {" "}
-          ICU (International Components for Unicode){" "}
-        </span>
-        format is a way of handling different linguistic and cultural needs for
-        a given localization.
+        {t.rich("ICUExamples.ICUDescription.Paragraph1", {
+          strong: (chunks) => <span className="font-bold">{chunks}</span>,
+        })}
       </p>
 
-      <p className="mb-4">
-        Across different cultures, things like count of objects, numbers (i.e.
-        money), gender, and dates can cause a sentence structure to change in a
-        unique way to that language.
-      </p>
+      <p className="mb-4">{t("ICUExamples.ICUDescription.Paragraph2")}</p>
 
-      <p className="mb-4">
-        Additionally, you may have a dynamic value used in your localization,
-        which would need to be handled differently based on different languages'
-        grammar, etc.
-      </p>
+      <p className="mb-4">{t("ICUExamples.ICUDescription.Paragraph3")}</p>
 
       <hr className="mb-4" />
 
       <section className="mb-4">
-        <h2 className="text-xl font-bold mb-3">Object Count Examples</h2>
+        <h2 className="text-xl font-bold mb-3">
+          {t("ICUExamples.ObjectCountExamples.SectionTitle")}
+        </h2>
 
-        <p>You have no items in your cart</p>
-        <p>You have 1 item in your cart</p>
-        <p>You have 2 items in your cart</p>
-        <p>You have 3 items in your cart</p>
+        <p>{t("ICUExamples.ObjectCountExamples.CartItems", { count: 0 })}</p>
+
+        <p>{t("ICUExamples.ObjectCountExamples.CartItems", { count: 1 })}</p>
+
+        <p>{t("ICUExamples.ObjectCountExamples.CartItems", { count: 2 })}</p>
+
+        <p>{t("ICUExamples.ObjectCountExamples.CartItems", { count: 3 })}</p>
       </section>
+
+      <hr className="mb-4" />
 
       <section className="mb-4">
-        <h2 className="text-xl font-bold mb-3">Number examples</h2>
-        <p>1000000000</p>
+        <h2 className="text-xl font-bold mb-3">
+          {t("ICUExamples.NumberExamples.SectionTitle")}
+        </h2>
+
+        <span>{t("ICUExamples.NumberExamples.NumberNormal.ExampleLabel")}</span>
+
+        <p className="mb-4">
+          {t("ICUExamples.NumberExamples.NumberNormal.Number", {
+            inputNumber: 1000000000.123456,
+          })}
+        </p>
+
+        <span>
+          {t("ICUExamples.NumberExamples.NumberPercentage.ExampleLabel")}
+        </span>
+
+        <p className="mb-4">
+          {t("ICUExamples.NumberExamples.NumberPercentage.Number", {
+            inputNumber: 0.6942,
+          })}
+        </p>
+
+        <span>
+          {t("ICUExamples.NumberExamples.NumberMeasurement.ExampleLabel")}
+        </span>
+
+        <p className="mb-4">
+          {t("ICUExamples.NumberExamples.NumberMeasurement.Number", {
+            inputNumber: 5000,
+          })}
+        </p>
+
+        <span>
+          {t("ICUExamples.NumberExamples.NumberCurrency.ExampleLabel")}
+        </span>
+
+        <p className="mb-4">
+          {t(
+            "ICUExamples.NumberExamples.NumberCurrency.Number",
+            { inputNumber: 32000.99 },
+            {
+              number: {
+                currency: {
+                  style: "currency",
+                },
+              },
+            },
+          )}
+        </p>
+
+        <span>
+          {t("ICUExamples.NumberExamples.NumberScientific.ExampleLabel")}
+        </span>
+
+        <p className="mb-4">
+          {t("ICUExamples.NumberExamples.NumberScientific.Number", {
+            inputNumber: 5000000000000,
+          })}
+        </p>
+
+        <p>
+          {t.rich("ICUExamples.NumberExamples.MoreSkeletonsLink", {
+            link: (chunks) => (
+              <Link
+                href="https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#notation"
+                className="underline"
+                target="_blank"
+              >
+                {chunks}
+              </Link>
+            ),
+          })}
+        </p>
       </section>
+
+      <hr className="mb-4" />
 
       <section className="mb-4">
         <h2 className="text-xl font-bold mb-3">Gender examples</h2>
 
         <div className="flex gap-6 flex-wrap">
           <div>
-            <p>There is 1 student (male)</p>
-            <p>There are 2 students (male)</p>
-            <p className="mb-2">There are 3 students (male)</p>
+            <p>
+              {t("ICUExamples.GenderExamples.ThereAreStudents", {
+                gender: "male",
+                count: 1,
+              })}
+            </p>
+
+            <p>
+              {t("ICUExamples.GenderExamples.ThereAreStudents", {
+                gender: "male",
+                count: 2,
+              })}
+            </p>
+
+            <p className="mb-2">
+              {t("ICUExamples.GenderExamples.ThereAreStudents", {
+                gender: "male",
+                count: 3,
+              })}
+            </p>
           </div>
 
           <div>
-            <p>There is 1 student (female)</p>
-            <p>There are 2 students (female)</p>
-            <p>There are 3 students (female)</p>
+            <p>
+              {t("ICUExamples.GenderExamples.ThereAreStudents", {
+                gender: "female",
+                count: 1,
+              })}
+            </p>
+
+            <p>
+              {t("ICUExamples.GenderExamples.ThereAreStudents", {
+                gender: "female",
+                count: 2,
+              })}
+            </p>
+
+            <p className="mb-2">
+              {t("ICUExamples.GenderExamples.ThereAreStudents", {
+                gender: "female",
+                count: 3,
+              })}
+            </p>
           </div>
         </div>
       </section>

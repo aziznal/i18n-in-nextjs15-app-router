@@ -18,7 +18,55 @@
   },
 
   "ICUExamples": {
-    "PageTitle": "ICU Beispiel"
+    "PageTitle": "Das ICU-Format",
+
+    "ICUDescription": {
+      "Paragraph1": "Das <strong>ICU (International Components for Unicode)</strong>-Format dient dazu, unterschiedliche sprachliche und kulturelle Anforderungen in einer Lokalisierung zu berücksichtigen.",
+      "Paragraph2": "In verschiedenen Kulturen können Dinge wie Objektzahlen, Währungen, Geschlechter und Daten dazu führen, dass sich die Satzstruktur in einer einzigartigen Weise an die jeweilige Sprache anpasst.",
+      "Paragraph3": "Zusätzlich können dynamische Werte in der Lokalisierung verwendet werden, die je nach Grammatik und anderen sprachlichen Aspekten unterschiedlich gehandhabt werden müssen."
+    },
+
+    "ObjectCountExamples": {
+      "SectionTitle": "Beispiele für Objektzählungen",
+      "CartItems": "Du hast {count, plural, =0 {keine Artikel} =1 {1 Artikel} other {# Artikel}} in deinem Warenkorb"
+    },
+
+    "NumberExamples": {
+      "SectionTitle": "Beispielzahlen",
+
+      "NumberNormal": {
+        "ExampleLabel": "Normale Zahl",
+        "Number": "{inputNumber, number}"
+      },
+
+      "NumberPercentage": {
+        "ExampleLabel": "Prozent",
+        "Number": "{inputNumber, number, ::percent .000}"
+      },
+
+      "NumberMeasurement": {
+        "ExampleLabel": "Messung",
+        "Number": "{inputNumber, number, ::measure-unit/length-meter unit-width-full-name}"
+      },
+
+      "NumberScientific": {
+        "ExampleLabel": "Wissenschaftliche Notation",
+        "Number": "{inputNumber, number, ::scientific}"
+      },
+
+      "NumberCurrency": {
+        "ExampleLabel": "Währungsnotation (EUR)",
+        "Number": "{inputNumber, number, currency::EUR}"
+      },
+
+      "MoreSkeletonsLink": "Weitere Skeletons <link>hier</link>"
+    },
+
+    "GenderExamples": {
+      "SectionTitle": "Beispiele für Geschlecht",
+
+      "ThereAreStudents": "{gender, select, male {{count, plural, =1 {Es gibt 1 Student (männlich)} =2 {Es gibt 2 Studenten (männlich)} other {Es gibt # Studenten (männlich)}}} female {{count, plural, =1 {Es gibt 1 Studentin (weiblich)} =2 {Es gibt 2 Studentinnen (weiblich)} other {Es gibt # Studentinnen (weiblich)}}} other {{count, plural, =1 {Es gibt 1 Student} =2 {Es gibt 2 Studenten} other {Es gibt # Studenten}}}}"
+    }
   },
 
   "Validation": {
