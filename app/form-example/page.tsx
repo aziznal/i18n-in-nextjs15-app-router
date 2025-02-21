@@ -10,10 +10,10 @@ import {
 } from "@/lib/client/components/Form";
 import { Input } from "@/lib/client/components/Input";
 import { Page } from "@/lib/client/components/Page";
-import { LoginForm, loginFormSchema } from "@/lib/common/form-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
+import { LoginForm, loginFormSchema } from "./form-schema";
 
 export default function FormExamplePage() {
   const t = useTranslations();

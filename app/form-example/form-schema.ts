@@ -1,4 +1,3 @@
-// import { z } from "@/lib/i18n/zod";
 import { z } from "zod";
 
 const emailSchema = z.string().email().min(1).max(255);
