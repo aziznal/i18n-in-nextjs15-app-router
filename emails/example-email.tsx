@@ -10,10 +10,9 @@ import {
 import { createTranslator } from "next-intl";
 
 import * as en from "@/public/locales/en.json";
+import { TranslationFunction } from "@/lib/i18n/types";
 
-export const ExampleEmail = (props?: {
-  t: ReturnType<typeof createTranslator>;
-}) => {
+export const ExampleEmail = (props?: { t: TranslationFunction }) => {
   const t =
     props?.t ??
     createTranslator({

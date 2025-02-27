@@ -1,4 +1,5 @@
-import en from "@/public/locales/en.json";
+import type en from "@/public/locales/en.json";
+import { Formats, TranslationValues } from "next-intl";
 
 type TranslationKeys = typeof en;
 
@@ -14,8 +15,15 @@ type DeepKeys<T> = T extends object
 /** All available translation keys in flattened dot notation */
 export type TranslationKey = DeepKeys<TranslationKeys>;
 
+// ISSUES:
+// - We are dependent on next-intl to provide us the TranslationValues and Formats types.
+export type TranslationFunction = (
+  key: TranslationKey,
+  values?: TranslationValues,
+  formats?: Formats,
+) => string;
+
 declare global {
   // Use type safe message keys with `next-intl`
-  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
   interface IntlMessages extends TranslationKeys {}
 }
